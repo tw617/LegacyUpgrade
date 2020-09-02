@@ -1,0 +1,40 @@
+if %PROCESSOR_ARCHITECTURE% == x86 then
+	echo 硂琌 x86 ╰参
+	rem OS32Pg32_pf=%ProgramFiles%
+	rem OS32Pg32_cpf=%CommonProgramFiles%
+
+	rem OS32Pg64=ぃ
+	rem ------------------------------
+	set pf32=%ProgramFiles%
+	set cpf32=%CommonProgramFiles%
+	end if
+
+if %PROCESSOR_ARCHITECTURE% == AMD64 then
+	echo 硂琌 AMD64 ╰参
+	rem OS64Pg32_pf=%ProgramFiles(x86)%
+	rem OS64Pg32_cpf=%CommonProgramFiles(x86)%
+
+	rem OS64Pg64_pf=%ProgramFiles%
+	rem OS64Pg64_cpf=%CommonProgramFiles%
+	rem ------------------------------
+	set pf32=%ProgramFiles(x86)%
+	set cpf32=%CommonProgramFiles(x86)%
+	set pf64=%ProgramFiles%
+	set cpf64=%CommonProgramFiles%
+	end if
+
+祘Α絏 ∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽∽
+
+if %PROCESSOR_ARCHITECTURE% == x86 (
+	echo 硂琌 x86 ╰参
+	set pf32=%ProgramFiles%
+	set cpf32=%CommonProgramFiles%
+	)
+
+if %PROCESSOR_ARCHITECTURE% == AMD64 (
+	echo 硂琌 AMD64 ╰参
+	set pf32=%ProgramFiles(x86)%
+	set cpf32=%CommonProgramFiles(x86)%
+	set pf64=%ProgramFiles%
+	set cpf64=%CommonProgramFiles%
+	)

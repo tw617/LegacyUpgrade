@@ -1,0 +1,23 @@
+●取得限定資料列數
+ArrayRowNum=0
+Do While RS.EOF="False"
+	RS.Find="[SoftBriefName(25)]='" & Brief & "'"
+	if NOT RS.EOF then
+		ArrayRowNum = ArrayRowNum +1			'累計資料列數
+		RS.MoveNext
+		End if
+	Loop
+
+●列出所有資料
+RS.MoveFirst
+While Not RS.EOF
+	Row = "<TR>"
+	For i=0 to rs.Fields.Count-1
+		Row = Row & "<TD>" & Rtrim(Rs(i)) & "</TD>"
+		Row = Row & "	"
+		Next
+	Response.Write Row & "</TR>" & Chr("13")
+	rs.MoveNext
+	Wend
+
+●

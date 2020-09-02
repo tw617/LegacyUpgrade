@@ -1,0 +1,8 @@
+if %PROCESSOR_ARCHITECTURE% == x86 echo 這是 x86 系統
+if %PROCESSOR_ARCHITECTURE% == AMD64 echo 這是 AMD64 系統
+
+
+if %PROCESSOR_ARCHITECTURE% == x86 set pf=%ProgramFiles%
+if %PROCESSOR_ARCHITECTURE% == AMD64 set pf=%ProgramFiles(x86)%
+if %PROCESSOR_ARCHITECTURE% == x86 set cpf=%CommonProgramFiles%
+if %PROCESSOR_ARCHITECTURE% == AMD64 set cpf=%CommonProgramFiles(x86)%
